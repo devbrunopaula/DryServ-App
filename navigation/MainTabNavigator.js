@@ -6,6 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import WorkOrderScreen from '../screens/WorkOrder'
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -53,8 +54,25 @@ SettingsStack.navigationOptions = {
   ),
 };
 
+// Test Tab
+const WorkOrderStack = createStackNavigator({
+  WorkOrder: WorkOrderScreen,
+});
+
+WorkOrderStack.navigationOptions = {
+  tabBarLabel: 'Contact Us',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? 'ios-call' : 'md-call'}
+    />
+  ),
+};
+//
+
 export default createBottomTabNavigator({
   HomeStack,
   LinksStack,
   SettingsStack,
+  WorkOrderStack
 });
