@@ -47,6 +47,7 @@ export default class extends Component {
             <View style={{flex:1}}>
                 <Swiper
                     autoplay
+                    autoplayTimeout={5}
                     height={160}
                 >
                 {
