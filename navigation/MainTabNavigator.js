@@ -19,8 +19,8 @@ HomeStack.navigationOptions = {
       focused={focused}
       name={
         Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
+          ? `${focused ? 'ios-home' : 'ios-home'}`
+          : 'ios-home'
       }
     />
   ),
@@ -31,7 +31,7 @@ const LinksStack = createStackNavigator({
 });
 
 LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+  tabBarLabel: 'Services',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}

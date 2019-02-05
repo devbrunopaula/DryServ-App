@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, Avatar } from 'react-native-elements'
+
 import {
   Image,
   Platform,
@@ -8,47 +8,57 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Dimensions
 } from 'react-native';
 import { WebBrowser } from 'expo';
-import HeroImage from '../components/HeroImage'
-import Services from '../components/Services'
-
 import { MonoText } from '../components/StyledText';
-
+import Test from './Test'
+import Popular from './popularServices'
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
   };
 
   render() {
+
+    
     return (
-      <View style={styles.container}>
-     
-        <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-          <View style={styles.welcomeContainer}>
-              <HeroImage/>
-          </View>
+      <View>
+      <Popular/>
+            <ScrollView  horizontal={false}>
+              
+                
+                <View style={styles.container}>
+                  {/* BODY */}
+                  <Text>
+                  Lorem ipsum dolor sit amet, eam ut soluta salutandi laboramus. Vis inani nonumes id, vis ut tamquam numquam liberavisse, tale regione assentior ei mei. Ex vel mutat molestiae consequat, et cum eros recteque comprehensam, sit consul suscipit menandri ad. Vim alienum accusata in. Per modus persius at.
 
-          <View style={styles.getStartedContainer}>
-            <Services/>
+Ne pri quot corrumpit, duo eripuit aliquando instructior ad. Atqui labitur officiis ad sed, ubique senserit per ne, his et enim melius. Magna posse no ius. His dico partem alienum id, te eos nominavi corrumpit percipitur, id indoctum molestiae usu. No numquam nominavi necessitatibus mel. Habeo sonet vim eu, cum ea voluptua indoctum.
 
+Eu vis nostro liberavisse, ne vide error nec. Cu equidem gubergren vis, eum nonumy recteque an. Ius ne illum dolorum, tantas populo fabellas cu his. Ad tota efficiendi nec. Vix recusabo definitiones at, cum modo audire facilisi ut, et paulo sensibus mediocrem vim.
 
+Sit omnium repudiandae cu, nec nisl scripta electram at. Est ex doming aliquip. Tollit vituperatoribus est et, facer vitae delenit sit no. Mel in harum dicunt, no vis partiendo deseruisse inciderint, pri feugiat menandri ne. Maiestatis argumentum ex sed, at eos dicat repudiare. Ex vis corpora philosophia, dicat vituperatoribus per ne.
 
+Ad ius soluta persius, diam iudico ceteros pro et. Qui fierent eleifend ut. Elitr primis tincidunt pri cu, te eam
+duo eripuit aliquando instructior ad. Atqui labitur officiis ad sed, ubique senserit per ne, his et enim melius. Magna posse no ius. His dico partem alienum id, te eos nominavi corrumpit percipitur, id indoctum molestiae usu. No numquam nominavi necessitatibus mel. Habeo sonet vim eu, cum ea voluptua indoctum.
 
+Eu vis nostro liberavisse, ne vide error nec. Cu equidem gubergren vis, eum nonumy recteque an. Ius ne illum dolorum, tantas populo fabellas cu his. Ad tota efficiendi nec. Vix recusabo definitiones at, cum modo audire facilisi ut, et paulo sensibus mediocrem vim.
 
+Sit omnium repudiandae cu, nec nisl scripta electram at. Est ex doming aliquip. Tollit vituperatoribus est et, facer vitae delenit sit no. Mel in harum dicunt, no vis partiendo deseruisse inciderint, pri feugiat menandri ne. Maiestatis argumentum ex sed, at eos dicat repudiare. Ex vis corpora philosophia, dicat vituperatoribus per ne.
 
-          </View>
+Ad ius soluta persius, diam iudico ceteros pro et. Qui fierent eleifend ut. Elitr primis tincidunt pri cu, te eamduo eripuit aliquando instructior ad. Atqui labitur officiis ad sed, ubique senserit per ne, his et enim melius. Magna posse no ius. His dico partem alienum id, te eos nominavi corrumpit percipitur, id indoctum molestiae usu. No numquam nominavi necessitatibus mel. Habeo sonet vim eu, cum ea voluptua indoctum.
 
-          <View style={styles.helpContainer}>
-            <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>
-              <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
-            </TouchableOpacity>
-          </View>
-        </ScrollView>
+Eu vis nostro liberavisse, ne vide error nec. Cu equidem gubergren vis, eum nonumy recteque an. Ius ne illum dolorum, tantas populo fabellas cu his. Ad tota efficiendi nec. Vix recusabo definitiones at, cum modo audire facilisi ut, et paulo sensibus mediocrem vim.
 
-        
+Sit omnium repudiandae cu, nec nisl scripta electram at. Est ex doming aliquip. Tollit vituperatoribus est et, facer vitae delenit sit no. Mel in harum dicunt, no vis partiendo deseruisse inciderint, pri feugiat menandri ne. Maiestatis argumentum ex sed, at eos dicat repudiare. Ex vis corpora philosophia, dicat vituperatoribus per ne.
+
+Ad ius soluta persius, diam iudico ceteros pro et. Qui fierent eleifend ut. Elitr primis tincidunt pri cu, te eam
+
+                  </Text>
+               </View>
+           </ScrollView>
       </View>
-    );
+     );
   }
 
  
@@ -56,82 +66,19 @@ export default class HomeScreen extends React.Component {
   
 }
 
+
+
+// Styles
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-  },
+   // backgroundColor: 'blue',
+    width: 80+'%',
+    justifyContent: 'center'
+  }
   
-  contentContainer: {
-    paddingTop: 10,
-  },
-  welcomeContainer: {
-    alignItems: 'center',
-    marginTop: 10,
-    marginBottom: 20,
-  },
- 
-  getStartedContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    paddingHorizontal: 10
-    
-  },
-  homeScreenFilename: {
-    marginVertical: 7,
-  },
-  codeHighlightText: {
-    color: 'rgba(96,100,109, 0.8)',
-  },
-  codeHighlightContainer: {
-    backgroundColor: 'rgba(0,0,0,0.05)',
-    borderRadius: 3,
-    paddingHorizontal: 4,
-  },
-  getStartedText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    lineHeight: 24,
-    textAlign: 'center',
-  },
-  tabBarInfoContainer: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    ...Platform.select({
-      ios: {
-        shadowColor: 'black',
-        shadowOffset: { height: -3 },
-        shadowOpacity: 0.1,
-        shadowRadius: 3,
-      },
-      android: {
-        elevation: 20,
-      },
-    }),
-    alignItems: 'center',
-    backgroundColor: '#fbfbfb',
-    paddingVertical: 20,
-  },
-  tabBarInfoText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    textAlign: 'center',
-  },
-  navigationFilename: {
-    marginTop: 5,
-  },
-  helpContainer: {
-    marginTop: 15,
-    alignItems: 'center',
-  },
-  helpLink: {
-    paddingVertical: 15,
-  },
-  helpLinkText: {
-    fontSize: 14,
-    color: '#2e78b7',
-  },
 });
+
+
+

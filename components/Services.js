@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet} from 'react-native'
-import { Icon, Avatar, Card, Button} from 'react-native-elements'
+import { Icon, Avatar, Card, Button } from 'react-native-elements'
 
 
 const services = [
@@ -43,7 +43,14 @@ export default class Services extends Component {
                             backgroundColor='#03A9F4'
                             buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
                             title={u.name} />
-</Card>
+                    </Card>
+                    <Avatar
+  size="xlarge"
+  rounded
+  title="CR"
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
                     </View>
                 )
             })
