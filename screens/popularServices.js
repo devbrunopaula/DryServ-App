@@ -39,13 +39,7 @@ export default class Services extends React.Component {
       <ScrollView 
         horizontal={true}
         style={styles.container}
-        removeClippedSubviews={true}
-        scrollEnabled={true}
-        showsHorizontalScrollIndicator={false}
-        endFillColor={'#00ffff'}
-        ocenterContent={'true'}
-         
-         >
+        >
          
         {urls.map((url)=> 
             <Avatar
@@ -58,32 +52,21 @@ export default class Services extends React.Component {
                 />
         )}
         
-        
-        
-        
-        
-        
-       
-      </ScrollView>
+    </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-   // flex: 1,
     height: 100,
-    alignItems: 'center',
-   // alignContent: 'center',
-   // justifyContent: 'center',
-   // backgroundColor: '#f2f2f2',
+    paddingTop: 15,
+    marginHorizontal: 15,
+    alignContent: 'center',
+   
     
   },
   serviceItems:{
-      marginHorizontal: 5,
-      
-  },
-  text: {
-      position: 'absolute'
+      marginHorizontal: 5
   }
 });
